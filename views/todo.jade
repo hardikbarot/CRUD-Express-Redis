@@ -1,0 +1,17 @@
+h1 new todo list
+form(action="/save", method="post")
+  p
+    label Enter a new todo item
+    input(type='text',placeholder='new todo', name='todo-text', value='#{oldText}')
+    input(type='hidden',placeholder='new todo', name='id', value='#{anid}')
+  p
+    input(type='submit', value='Save')
+table
+  each todo in todos
+    tr
+      td #{todo.text}
+      td
+        a(href='/todo?id=#{todo.id}') Edit
+      td
+        a(href='/remove?id=#{todo.id}') Delete
+
