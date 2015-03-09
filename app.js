@@ -29,8 +29,8 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
-app.get('/about', routes.about);
+app.get('/', routes.todo);
+app.get('/about', routes.todo);
 app.get('/todo', routes.todo);
 app.post('/save', routes.saveTodo);
 app.get('/remove', routes.removeTodo);
